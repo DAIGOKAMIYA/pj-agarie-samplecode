@@ -1,0 +1,169 @@
+body.service section:first-child {
+  margin-top: 10rem;
+}
+
+@media screen and (max-width: 56em) {
+  body.service section:first-child {
+    margin-top: 3rem;
+  }
+}
+
+body.service section:last-child {
+  margin-top: 8rem;
+}
+
+@media screen and (max-width: 56em) {
+  body.service section:last-child {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.service-content {
+  padding: 6rem 0 8rem;
+}
+
+@media screen and (max-width: 56em) {
+  .service-content {
+    padding: 3rem 0 5rem;
+  }
+}
+
+.service-content__inner {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  position: relative;
+}
+
+.service-content__img {
+  width: 960px;
+  width: calc(960 / 1280 * 100%);
+  position: absolute;
+  top: -6rem;
+  left: 40px;
+}
+
+@media screen and (max-width: 56em) {
+  .service-content__img {
+    position: static;
+    width: 92%;
+    max-width: initial;
+    height: 85.337vw;
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 56em) {
+  .service-content__img img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.service-content__img--reverse {
+  left: auto;
+  right: 40px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.service-content__desc {
+  margin-left: auto;
+  margin-right: 40px;
+  max-width: 460px;
+  width: calc(460 / 1200 * 100%);
+  padding: 4rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+@media screen and (max-width: 56em) {
+  .service-content__desc {
+    margin-top: -27vw;
+    margin-right: 0;
+    width: 92%;
+    max-width: initial;
+    padding: 3rem;
+  }
+}
+
+.service-content__desc--reverse {
+  margin-left: 40px;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 56em) {
+  .service-content__desc--reverse {
+    margin-left: 0;
+  }
+}
+
+.service-content__desc .logo {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.service-content__desc .logo--1 {
+  max-width: 311px;
+}
+
+@media screen and (max-width: 56em) {
+  .service-content__desc .logo--1 {
+    max-width: 283px;
+  }
+}
+
+.service-content__desc .logo--2 {
+  max-width: 276px;
+}
+
+@media screen and (max-width: 56em) {
+  .service-content__desc .logo--2 {
+    max-width: 258px;
+  }
+}
+
+.service-content__desc .logo--3 {
+  max-width: 375px;
+}
+
+@media screen and (max-width: 56em) {
+  .service-content__desc .logo--3 {
+    max-width: 292px;
+  }
+}
+
+.service-content__desc h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  line-height: calc(28/18);
+}
+
+@media screen and (max-width: 56em) {
+  .service-content__desc h2 {
+    letter-spacing: .02em;
+  }
+}
+
+.service-content__desc p {
+  margin: 0 auto 3rem;
+}
+
+.service-content__desc .btn {
+  margin: 0 auto;
+  display: block;
+  width: 291px;
+  max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .service-content__desc .btn {
+    max-width: initial;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=maps/service.css.map */

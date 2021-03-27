@@ -1,0 +1,286 @@
+.p-post{
+    padding: 0 0 8rem 0;
+    @include sp{
+        padding: 0 0 4rem;
+    }
+    &__img{
+        margin-bottom: 8rem;
+        width: 100%;
+        @include sp{
+            margin-bottom: 3rem;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    header{
+        margin-bottom: 4rem;
+        padding: 0 0 2.7rem 0;
+        border-bottom: 1px solid #cfcfcf;
+        @include sp{
+            margin-bottom: 0;
+        }
+    }
+    h1{
+        color: $water;
+        font-size: 3.5rem;
+        font-weight: bold;
+        line-height: 1;
+        @include sp{
+            font-size: 3rem;
+            line-height: calc(40/30);
+        }
+    }
+    .date{
+        margin-top: 2.5rem;
+        margin-right: 2rem;
+        display: inline-block;
+        color: #909090;
+        font-family: $lato;
+        font-size: 1.6rem;
+        line-height: calc(15/16);
+        @include sp{
+            margin-top: 2rem;
+        }
+    }
+    .cat{
+        margin-top: 2.5rem;
+        display: inline-block;
+        @include sp{
+            margin-top: 2rem;
+        }
+        span{
+            margin-right: 1rem;
+            padding: .4rem 1rem;
+            background-color: $water;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+    }
+    h2{
+        margin: 3rem 0;
+        padding: 2.2rem 0;
+        border-bottom: 4px solid $water;
+        color: $water;
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: calc(28/30);
+        @include sp{
+            padding: 1rem 0;
+            font-size: 2.4rem;
+            line-height: calc(30/24);
+        }
+    }
+    h3{
+        margin: 3rem 0;
+        color: $water;
+        font-size: 2.3rem;
+        font-weight: bold;
+        line-height: 1;
+    }
+    h4{
+        font-weight: bold;
+    }
+    p{
+        margin: 3rem 0;
+    }
+    ol,ul{
+        margin: 3rem 0;
+        padding: 3.6rem 4rem;
+        border: 2px solid $water;
+        @include sp{
+            padding: 2.6rem 3rem;
+        }
+    }
+    li{
+        margin-top: 1rem;
+        position: relative;
+        color: $water;
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    ol{
+        counter-reset: my_counter;
+        li{
+            padding-left: 3.4rem;
+            &::before{
+                content: counter(my_counter);
+                counter-increment: my_counter;
+                width: 2.4rem;
+                height: 2.4rem;
+                padding: 5px 7px 4.5px 7px;
+                background-color: $water;
+                border-radius: 2px;
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                color: #fff;
+                font-size: 1.8rem;
+                font-family: $lato;
+                line-height: calc(15/18);
+                text-align: center;
+            }
+        }
+    }
+    ul{
+        li{
+            padding-left: 2.5rem;
+            &::before{
+                content: '';
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: $water;
+                border-radius: 50%;
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    hr{
+        border-top: 4px solid $water;
+    }
+}
+
+.p-newsItem{
+    &__img{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        &::before{
+            content: '';
+            display: block;
+            padding-top: calc(180/270*100%);
+        }
+        img{
+            width: auto;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .cat{
+        margin-top: 1rem;
+        span{
+            margin-right: 1rem;
+            padding: .4rem 1rem;
+            background-color: $water;
+            border-radius: 4px;
+            display: inline-block;
+            color: #fff;
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+    }
+    .title{
+        margin-top: .5rem;
+        color: $water;
+        font-size: 1.6rem;
+        line-height: calc(26/16);
+        letter-spacing: .07em;
+        font-weight: bold;
+    }
+    .date{
+        margin-top: 1rem;
+        color: #909090;
+        font-family: $lato;
+        font-size: 1.6rem;
+        line-height: calc(15/16);
+    }
+}
+
+.p-relatedPost{
+    padding-bottom: 12rem;
+    @include sp{
+        padding-bottom: 10rem;
+    }
+    &__head{
+        .title{
+            margin-bottom: 4rem;
+            text-align: center;
+            span{
+                display: block;
+                &.en{
+                    font-size: 3rem;
+                    font-family: $raleway;
+                    font-weight: bold;
+                    line-height: 1;
+                }
+                &.ja{
+                    margin-top: 1rem;
+                    color: $water;
+                    font-size: 1.5rem;
+                    line-height: calc(26/15);
+                }
+            }
+        }
+    }
+    &__list{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    article{
+        width: 22.5%;
+        margin-left: 3.3333%;
+        margin-bottom: 3.333%;
+        @include tb{
+            width: 31%;
+            margin-left: 3.5%;
+            margin-bottom: 3.5%;
+        }
+        @include sp{
+            width: 47.5%;
+            margin-left: 5%;
+            margin-bottom: 5%;
+        }
+        @include spp{
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 5.333%;
+        }
+        &:nth-child(4n-3){
+            margin-left: 0;
+            @include tb{
+                margin-left: 3.5%;
+            }
+            @include sp{
+                margin-left: 5%;
+            }
+            @include spp{
+                margin-left: 0;
+            }
+        }
+        &:nth-child(3n-2){
+            @include tb{
+                margin-left: 0;
+            }
+            @include sp{
+                margin-left: 5%;
+            }
+            @include spp{
+                margin-left: 0;
+            }
+        }
+        &:nth-child(2n-1){
+            @include sp{
+                margin-left: 0;
+            }
+            @include spp{
+                margin-left: 0;
+            }
+        }
+    }
+}

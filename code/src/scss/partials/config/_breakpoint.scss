@@ -1,0 +1,72 @@
+// アートボード幅以下
+@mixin bp1{
+    @media screen and (max-width:90em) {
+        @content;
+    }
+    // @media screen and (max-width:1440px) {
+    //     @content;
+    // }
+}
+
+@mixin bp2{
+    @media screen and (max-width:80em) {
+        @content;
+    }
+    // @media screen and (max-width:1280px) {
+    //     @content;
+    // }
+}
+@mixin bp3{
+    @media screen and (max-width:67.5em) {
+        @content;
+    }
+    // @media screen and (max-width:1080px) {
+    //     @content;
+    // }
+}
+@mixin bp4{
+    @media screen and (max-width:75em) {
+        @content;
+    }
+    // @media screen and (max-width:1200px) {
+    //     @content;
+    // }
+}
+
+// タブレット以下
+@mixin tb{
+    @media screen and (max-width:64em) {
+        @content;
+    }
+    // @media screen and (max-width:1024px) {
+    //     @content;
+    // }
+}
+
+// スマホ横
+@mixin sp{
+    @media screen and (max-width:56em) {
+        @content;
+    }
+    // @media screen and (max-width:896px) {
+    //     @content;
+    // }
+}
+// スマホ縦
+@mixin spp{
+    @media screen and (max-width:40em) {
+        @content;
+    }
+    // @media screen and (max-width:640px) {
+    //     @content;
+    // }
+}
+// スマホ小
+@mixin sps{
+    @media screen and (max-width:23em) {
+        @content;
+    }
+    // @media screen and (max-width:368px) {
+    //     @content;
+    // }
+}

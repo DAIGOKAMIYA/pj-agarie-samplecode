@@ -1,0 +1,12 @@
+.c-img-square{
+    position: relative;
+    overflow: hidden;
+    &::before{
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+    img{
+        position: absolute;
+    }
+}

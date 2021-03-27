@@ -1,0 +1,30 @@
+.c-inner{
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100%;
+    /* 幅960px */
+    max-width: 1000px;
+    padding: 0 20px;
+    @include sp{
+        padding: 0 8%;
+        // padding: 0 5.333%;
+    }
+    &--l{
+        @extend .c-inner;
+        /* 幅1366px */
+        max-width: 1280px;
+        padding: 0 40px;
+        @include sp{
+            padding: 0 8%;
+        }
+    }
+    &--s{
+        @extend .c-inner;
+        /* 幅720px */
+        max-width: 720px;
+        padding: 0 40px;
+        @include sp{
+            padding: 0 8%;
+        }
+    }
+}

@@ -1,0 +1,147 @@
+@charset "utf-8";
+// config ------------------------------------------------------------
+@import "partials/config/_variable";
+@import "partials/config/_breakpoint";
+
+.staff-manager{
+    padding: 10rem 0;
+    @include sp{
+        padding: 6rem 0 8rem;
+    }
+    &__flex{
+        &--pc{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include sp{
+                display: block;
+            }
+        }
+    }
+    &__img{
+        margin-right: 6.25%;
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        overflow: hidden;
+        @include sp{
+            margin: 0 auto 2rem 0;
+            width: 100%;
+            max-width: 314px;
+            height: auto;
+        }
+        img{
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+    &__txt{
+        width: calc(100% - 360px);
+        max-width: 540px;
+        @include sp{
+            width: 100%;
+        }
+        p{
+            margin: 2rem 0;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.staff-list{
+    padding: 6rem 0 0;
+    background-color: #f9f9f9;
+    @include sp{
+        padding: 4rem 0 0;
+    }
+    &.-advisory{
+        padding-top: 10rem;
+        @include sp{
+            padding-top: 8rem;
+        }
+    }
+    &.-care{
+        padding-bottom: 10rem;
+        @include sp{
+            padding-bottom: 7rem;
+        }
+    }
+    &__title{
+        margin-bottom: 6rem;
+        @include sp{
+            margin-bottom: 4rem;
+        }
+        h2{
+            height: 12.9rem;
+            text-align: center;
+            img{
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+    &__inner{
+        @include sp{
+            padding: 0;
+        }
+    }
+    &__body{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        @include spp{
+            justify-content: flex-start;
+        }
+        .item{
+            margin: 0 4.1666% 6rem;
+            // margin: 6rem 0 0;
+            width: 25%;
+            @include sp{
+                margin: 0 2.5% 3rem;
+                width: 45%;
+                // max-width: 150px;
+            }
+            &__img{
+                width: 100%;
+                border-radius: 50%;
+                position: relative;
+                overflow: hidden;
+                &::before{
+                    content: '';
+                    display: block;
+                    padding-top: 100%;
+                }
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            &__txt{
+                margin-top: 3rem;
+                text-align: center;
+                @include sp{
+                    margin-top: 2rem;
+                }
+                .ja{
+                    display: block;
+                    font-size: 2.2rem;
+                    line-height: 1;
+                    font-weight: $medium;
+                }
+                .en{
+                    margin-top: .7rem;
+                    display: block;
+                    color: $water;
+                    font-size: 1.4rem;
+                    line-height: calc(16/14);
+                }
+            }
+        }
+    }
+}

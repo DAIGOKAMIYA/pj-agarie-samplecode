@@ -1,0 +1,157 @@
+.news-list {
+  padding: 10rem 0 14rem;
+}
+
+@media screen and (max-width: 56em) {
+  .news-list {
+    padding: 6rem 0 10rem;
+  }
+}
+
+.news-list__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.news-list article {
+  width: 22.5%;
+  margin-left: 3.3333%;
+  margin-bottom: 3.333%;
+}
+
+@media screen and (max-width: 64em) {
+  .news-list article {
+    width: 31%;
+    margin-left: 3.5%;
+    margin-bottom: 3.5%;
+  }
+}
+
+@media screen and (max-width: 56em) {
+  .news-list article {
+    width: 47.5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .news-list article {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 5.333%;
+  }
+}
+
+.news-list article:nth-child(4n-3) {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 64em) {
+  .news-list article:nth-child(4n-3) {
+    margin-left: 3.5%;
+  }
+}
+
+@media screen and (max-width: 56em) {
+  .news-list article:nth-child(4n-3) {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .news-list article:nth-child(4n-3) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 64em) {
+  .news-list article:nth-child(3n-2) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 56em) {
+  .news-list article:nth-child(3n-2) {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .news-list article:nth-child(3n-2) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 56em) {
+  .news-list article:nth-child(2n-1) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .news-list article:nth-child(2n-1) {
+    margin-left: 0;
+  }
+}
+
+.wp-pagenavi {
+  margin: 2rem 0 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 56em) {
+  .wp-pagenavi {
+    margin-top: 4.5rem;
+  }
+}
+
+.wp-pagenavi .page,
+.wp-pagenavi .current,
+.wp-pagenavi .extend,
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink,
+.wp-pagenavi .first,
+.wp-pagenavi .last {
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+
+.wp-pagenavi .page {
+  background-color: transparent;
+  color: #00AEC4;
+}
+
+.wp-pagenavi .current {
+  background-color: #00AEC4;
+  color: #fff;
+}
+
+.wp-pagenavi .extend {
+  color: #00AEC4;
+}
+
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+  color: #00AEC4;
+  font-size: 1.5rem;
+}
+
+.wp-pagenavi .first,
+.wp-pagenavi .last {
+  color: #00AEC4;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=maps/news.css.map */

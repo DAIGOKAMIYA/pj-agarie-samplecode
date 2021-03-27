@@ -1,0 +1,16 @@
+.contact-content {
+  padding: 10rem 0 16rem;
+}
+
+@media screen and (max-width: 56em) {
+  .contact-content {
+    padding: 6rem 0 10rem;
+  }
+}
+
+@media screen and (max-width: 56em) {
+  .contact-content__inner {
+    padding: 0 10px;
+  }
+}
+/*# sourceMappingURL=maps/contact copy.css.map */

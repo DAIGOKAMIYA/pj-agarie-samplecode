@@ -1,0 +1,59 @@
+<%- include('../_config/_config'); %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        <% if (!html) { %><% } else { %><%- title %><% } %>
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="<%- dir %>/assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="<%- dir %>/assets/lib/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="<%- dir %>/assets/lib/slick/slick-theme.css"/>
+    <% if (!html) { %>
+        <?php if (is_home()) { ?>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/index.css">
+        <?php } elseif (is_page('service')) { ?>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/service.css">
+        <?php } elseif (is_page('about')) { ?>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/about.css">
+        <?php } elseif (is_page('staff')) { ?>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/staff.css">
+        <?php } elseif (is_page('career') || is_page('career_form') || is_page('career_form-thanks')) { ?>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/career.css">
+        <?php } elseif (is_page('contact')) { ?>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/contact.css">
+        <?php } elseif (is_page('contact-thanks')) { ?>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/contact.css">
+        <?php } elseif (is_page('privacy')) { ?>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/privacy.css">
+        <?php } elseif (is_page('news')) { ?>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/news.css">
+        <?php } ?>
+    <% } else { %>
+        <% if (page == 'home') { %>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/index.css">
+        <% } else if (page == 'service') { %>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/service.css">
+        <% } else if (page == 'about') { %>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/about.css">
+        <% } else if (page == 'staff') { %>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/staff.css">
+        <% } else if (page == 'career' || page == 'career_form') { %>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/career.css">
+        <% } else if (page == 'contact') { %>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/contact.css">
+        <% } else if (page == 'privacy') { %>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/privacy.css">
+        <% } else if (page == 'news') { %>
+            <link rel="stylesheet" href="<%- dir %>/assets/css/news.css">
+        <% } %>
+    <% } %>
+    <% if (!html) { %>
+        <?php wp_head(); ?>
+    <% } %>
+</head>
+<body <% if (!html) { %><?php body_class(); ?><% } else { %>class="<%- page %>"<% } %>>
+    <div class="l-layout">

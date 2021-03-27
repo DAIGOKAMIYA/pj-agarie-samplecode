@@ -1,0 +1,171 @@
+@charset "utf-8";
+// config ------------------------------------------------------------
+@import "partials/config/_variable";
+@import "partials/config/_breakpoint";
+
+.p-career-item{
+    padding: 6rem 0 4rem;
+    background-color: #e5e5e5;
+    box-shadow: 0 4px 24px rgba(0,0,0,.15);
+    border-radius: 4px;
+    @include sp{
+        padding: 3rem 0;
+    }
+    &__inner{
+        @include sp{
+            padding: 0 20px;
+        }
+    }
+    &__name{
+        margin-bottom: 3rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include sp{
+            margin-bottom: 2rem;
+        }
+        .logo{
+            width: 8rem;
+            margin-right: 2rem;
+            @include sp{
+                margin-right: 1rem;
+            }
+        }
+        .name{
+            &__shokushu{
+                font-size: 2.4rem;
+                font-weight: $medium;
+                line-height: calc(20/24);
+                @include sp{
+                    font-size: 2rem;
+                }
+            }
+            &__jigyobu{
+                margin-top: 1rem;
+                color: #505050;
+                font-size: 1.4rem;
+                font-weight: $regular;
+                line-height: calc(20/14);
+            }
+
+        }
+    }
+    &__thumb{
+        @include sp{
+            height: 51.2vw;
+            overflow: hidden;
+            text-align: center;
+        }
+        img{
+            @include sp{
+                margin-left: 50%;
+                transform: translateX(-50%);
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+    &__txt{
+        h1,h2,h3{
+            margin: 4rem 0 2rem;
+            color: $water;
+            font-size: 2rem;
+            line-height: calc(28/20);
+            font-weight: $medium;
+            @include sp{
+                margin: 3rem 0 1.5rem;
+            }
+        }
+        p{
+            margin-top: 0;
+            letter-spacing: .1em;
+            @include sp{
+                letter-spacing: .095em;
+                margin-bottom: 2.8rem;
+            }
+        }
+    }
+    &__table{
+        margin-top: 4rem;
+    }
+    &__btn{
+        margin-top: 4rem;
+        text-align: center;
+        @include sp{
+            margin-top: 3rem;
+        }
+        .btn{
+            max-width: 240px;
+        }
+    }
+}
+.career-list{
+    padding: 10rem 0 16rem;
+    @include sp{
+        padding: 6rem 0 10rem;
+    }
+    &__inner{
+        @include sp{
+            padding: 0 20px;
+        }
+    }
+    &__title{
+        margin-bottom: 5rem;
+        @include sp{
+            margin-bottom: 4rem;
+        }
+    }
+    &__body{
+        .p-career-item{
+            margin-top: 8rem;
+            @include sp{
+                margin-top: 4rem;
+            }
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+    }
+}
+.career_form-content{
+    padding: 10rem 0 16rem;
+    @include sp{
+        padding: 6rem 0 10rem;
+    }
+    &__inner{
+        @include sp{
+            padding: 0 10px;
+        }
+    }
+    &--thanks{
+        text-align: center;
+        .p-form{
+            padding: 8rem 0;
+            @include sp{
+                padding: 4rem 0;
+            }
+            &__btn{
+                margin-top: 4.6rem;
+                @include sp{
+                    margin-top: 3.6rem;
+                }
+            }
+        }
+        h2{
+            margin-bottom: 5.5rem;
+            color: $water;
+            font-size: 3rem;
+            line-height: calc(20/30);
+            font-weight: $medium;
+            @include sp{
+                margin-bottom: 3.6rem;
+                font-size: 2.6rem;
+                line-height: calc(38/26);
+            }
+        }
+        p{
+            font-size: 1.6rem;
+            line-height: calc(30/16);
+        }
+    }
+}

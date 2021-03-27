@@ -1,0 +1,94 @@
+.c-table{
+    margin: 0 auto;
+    width: 100%;
+    tr{
+        border-collapse: collapse;
+        border-top: 1px solid #cfcfcf;
+        border-bottom: 1px solid #cfcfcf;
+        line-height: calc(22/15);
+        &:nth-last-child(2){
+            line-height: calc(23/15);
+        }
+        &:last-child{
+            td{
+                line-height: calc(25/15);
+                @include sp{
+                    line-height: calc(22/15);
+                }
+            }
+        }
+    }
+    th,td{
+        padding: 2.6rem 0;
+        font-weight: normal;
+        letter-spacing: .1em;
+        @include sp{
+            letter-spacing: .05em;
+        }
+    }
+    th{
+        width: 26%;
+        @include sp{
+            width: 30%;
+        }
+    }
+    td{
+        dl{
+            padding: .5rem 0;
+            @include sp{
+                padding: .3rem 0;
+            }
+        }
+        dt{
+            margin-top: .5rem;
+            font-weight: $medium;
+            @include sp{
+                margin-top: 1.5rem;
+            }
+            &:first-child{
+                margin-top: 0;
+                @include sp{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    &--vertical--sp{
+        th,td{
+            letter-spacing: .12em;
+        }
+        th{
+            padding: 3rem 0;
+        }
+        td{
+            padding: 2.9rem 3.6rem 2.9rem 0;
+            p{
+                margin-top: 0;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        tr:last-child{
+            td{
+                line-height: calc(22/15);
+            }
+        }
+        @include sp{
+            th,td{
+                width: 100%;
+                padding: 2.6rem 0;
+                display: block;
+            }
+            th{
+                margin-bottom: 1.6rem;
+                padding-bottom: 0;
+                color: $water;
+            }
+            td{
+                padding-top: 0;
+                letter-spacing: .094em;
+            }
+        }
+    }
+}

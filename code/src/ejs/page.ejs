@@ -1,0 +1,37 @@
+<%- include('./_config/_config'); %>
+<% title = 'タイトル' %>
+<% page = 'page' %>
+
+
+
+<% if (!html) { %><?php get_header();?><% } else { %><%- include('./_layouts/header'); %><% } %>
+<% if (!html) { %><?php get_template_part( 'components/content', 'header' ); ?><% } else { %><%- include('./components/content-header'); %><% } %>
+<div class="l-layout__contentsTop">
+    <div class="p-sub-mv">
+        <h1>
+            <span class="en"><?php the_title();?></span>
+            <span class="ja"><?php the_title();?></span>
+        </h1>
+    </div>
+</div>
+
+<div class="l-layout__contents">
+    <main class="l-layout__main">
+        <% if (!html) { %>
+            <?php if ( have_posts() ) : ?>
+                <?php while ( have_posts() ) : the_post(); ?>    
+                    <?php the_content(); ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        <% } else { %>
+
+        <% } %>
+    </main>
+</div><%# /.l-layout__contents %>
+
+<div class="l-layout__contentBottom">
+    <% if (!html) { %><?php get_template_part( 'components/content', 'bottom' ); ?><% } else { %><%- include('./components/content-bottom'); %><% } %>
+</div>
+<% if (!html) { %><?php get_template_part( 'components/content', 'footer' ); ?><% } else { %><%- include('./components/content-footer'); %><% } %>
+<% if (!html) { %><?php get_template_part( 'components/content', 'drawer' ); ?><% } else { %><%- include('./components/content-drawer'); %><% } %>
+<% if (!html) { %><?php get_footer();?><% } else { %><%- include('./_layouts/footer'); %><% } %>

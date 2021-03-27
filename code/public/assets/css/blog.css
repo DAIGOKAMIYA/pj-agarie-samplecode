@@ -1,0 +1,16 @@
+.news-list {
+  padding: 10rem 0 16rem;
+}
+
+@media screen and (max-width: 56em) {
+  .news-list {
+    padding: 6rem 0 10rem;
+  }
+}
+
+@media screen and (max-width: 56em) {
+  .news-list__inner {
+    padding: 0 10px;
+  }
+}
+/*# sourceMappingURL=maps/blog.css.map */

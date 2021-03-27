@@ -1,0 +1,47 @@
+.privacy-content {
+  padding: 10rem 0 16rem;
+}
+
+@media screen and (max-width: 56em) {
+  .privacy-content {
+    padding: 6rem 0 10rem;
+  }
+}
+
+@media screen and (max-width: 56em) {
+  .privacy-content__inner {
+    padding: 0 10px;
+  }
+}
+
+.privacy-content__body {
+  padding: 8rem 0 7rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 56em) {
+  .privacy-content__body {
+    padding: 4rem 0 1.4rem;
+  }
+}
+
+@media screen and (max-width: 56em) {
+  .privacy-content__body .c-inner {
+    padding: 0 20px;
+  }
+}
+
+.privacy-content__body h2 {
+  margin-bottom: 4rem;
+  color: #00AEC4;
+  font-size: 2.4rem;
+  line-height: calc(20/24);
+  letter-spacing: .06em;
+}
+
+.privacy-content__body p {
+  margin: 2.8rem 0;
+}
+/*# sourceMappingURL=maps/privacy.css.map */

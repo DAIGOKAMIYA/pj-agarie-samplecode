@@ -1,0 +1,112 @@
+@charset "utf-8";
+// config ------------------------------------------------------------
+@import "partials/config/_variable";
+@import "partials/config/_breakpoint";
+
+.news-list{
+    padding: 10rem 0 14rem;
+    @include sp{
+        padding: 6rem 0 10rem;
+    }
+    &__inner{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    article{
+        width: 22.5%;
+        margin-left: 3.3333%;
+        margin-bottom: 3.333%;
+        @include tb{
+            width: 31%;
+            margin-left: 3.5%;
+            margin-bottom: 3.5%;
+        }
+        @include sp{
+            width: 47.5%;
+            margin-left: 5%;
+            margin-bottom: 5%;
+        }
+        @include spp{
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 5.333%;
+        }
+        &:nth-child(4n-3){
+            margin-left: 0;
+            @include tb{
+                margin-left: 3.5%;
+            }
+            @include sp{
+                margin-left: 5%;
+            }
+            @include spp{
+                margin-left: 0;
+            }
+        }
+        &:nth-child(3n-2){
+            @include tb{
+                margin-left: 0;
+            }
+            @include sp{
+                margin-left: 5%;
+            }
+            @include spp{
+                margin-left: 0;
+            }
+        }
+        &:nth-child(2n-1){
+            @include sp{
+                margin-left: 0;
+            }
+            @include spp{
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.wp-pagenavi{
+    margin: 2rem 0 0;
+    text-align: center;
+    @include sp{
+        margin-top: 4.5rem;
+    }
+    .page,
+    .current,
+    .extend,
+    .previouspostslink,
+    .nextpostslink,
+    .first,
+    .last{
+        width: 3rem;
+        height: 3rem;
+        display: inline-block;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        font-family: $lato;
+        font-weight: $medium;
+        text-align: center;
+    }
+    .page{
+        background-color: transparent;
+        color: $water;
+    }
+    .current{
+        background-color: $water;
+        color: #fff;
+    }
+    .extend{
+        color: $water;
+    }
+    .previouspostslink,
+    .nextpostslink{
+        color: $water;
+        font-size: 1.5rem;
+    }
+    .first,
+    .last{
+        color: $water;
+        font-size: 2rem;
+    }
+}

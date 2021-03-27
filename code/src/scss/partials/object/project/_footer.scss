@@ -1,0 +1,126 @@
+.p-footer{
+    padding: 4rem 0;
+    background-color: $water;
+    @include sp{
+        padding: 4rem 0 7rem;
+    }
+    &__inner{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1280px;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include sp{
+            padding: 0 8%;
+        }
+    }
+    &__left{
+        width: 68%;
+        @include sp{
+            width: 100%;
+        }
+    }
+    &__right{
+        width: 32%;
+        @include sp{
+            width: 100%;
+        }
+    }
+    &__logo{
+        width: 281px;
+    }
+    &__menu{
+        margin-top: 4rem;
+        ul{
+            li{
+                display: inline;
+                @include sp{
+                    display: block;
+                }
+                &::before{
+                    content: '/';
+                    margin: 0 1.5rem 0 1rem;
+                    color: #fff;
+                    @include sp{
+                        content: none;
+                    }
+                }
+                &:first-child::before{
+                    content: none;
+                }
+                a{
+                    color: #fff;
+                    font-size: 1.5rem;
+                    @include sp{
+                        font-size: 2rem;
+                        line-height: 2;
+                    }
+                }
+            }
+        }
+    }
+    &__tel{
+        @include sp{
+            margin-top: 5.6rem;
+        }
+        dl{
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            line-height: 1;
+        }
+        dt,dd{
+            color: #fff;
+        }
+        dt{
+            margin-right: 1rem;
+            width: 5rem;
+            height: 2.2rem;
+            border: 1px solid #fff;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            text-align: center;
+            @include sp{
+                width: 8rem;
+                height: 3.5rem;
+                font-size: 1.8rem;
+                line-height: 3.3rem;
+            }
+        }
+        dd{
+            font-size: 1.8rem;
+            font-family: $lato;
+            @include sp{
+                font-size: 2.2rem;
+            }
+            a{
+                color: #fff;
+            }
+        }
+    }
+    &__btn{
+        margin-top: 2rem;
+        @include sp{
+            margin-top: 3rem;
+        }
+        .btn{
+            width: 100%;
+            max-width: 280px;
+            height: 5rem;
+            background-color: #000;
+            border-radius: 4px;
+            text-align: center;
+            @include sp{
+                max-width: initial;
+            }
+            a{
+                display: block;
+                color: #fff;
+                font-size: 1.6rem;
+                line-height: 5rem;
+            }
+        }
+    }
+}

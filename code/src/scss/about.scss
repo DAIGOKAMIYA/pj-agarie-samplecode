@@ -1,0 +1,282 @@
+@charset "utf-8";
+// config ------------------------------------------------------------
+@import "partials/config/_variable";
+@import "partials/config/_breakpoint";
+
+.about-message{
+    padding: 10rem 0;
+    background-color: #f9f9f9;
+    @include sp{
+        padding: 6rem 0;
+    } 
+    &__wrapper{
+        min-height: 925px;
+        position: relative;
+    }
+    &__inner{
+        @include sp{
+            padding: 0;
+        }
+    }
+    &__left{
+        width: calc(600 / 1200 * 100%);
+        padding-top: 6rem;
+        @include sp{
+            width: 100%;
+            padding-top: 0;
+        }
+    }
+    &__title{
+        @include sp{
+            padding: 0 8%;
+        }
+        h2{
+            margin-bottom: 5rem;
+            @include sp{
+                margin-bottom: 3rem;
+            }
+        }
+    }
+    &__body{
+        @include sp{
+            padding: 0 8%;
+        }
+        p{
+            margin: 3rem 0;
+            letter-spacing: .1em;
+            @include sp{
+                letter-spacing: .1em;
+            }
+        }
+        .name{
+            margin-top: 6rem;
+            margin-bottom: 1rem;
+            @include sp{
+                margin-top: 4rem;
+                margin-bottom: .6rem;
+            }
+        }
+        .career{
+            margin-top: 0;
+            font-size: 1.3rem;
+            line-height: calc(24/13);
+            letter-spacing: .003em;
+            @include sp{
+                line-height: calc(24/13);
+            }
+        }
+    }
+    &__img{
+        width: calc(640 / 1440 * 100%);
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include sp{
+            margin-bottom: 3rem;
+            width: 100%;
+            height: 100vw;
+            position: static;
+            overflow: hidden;
+        }
+        &.-pc{
+            display: block;
+            @include sp{
+                display: none;
+            }
+        }
+        &.-sp{
+            display: none;
+            @include sp{
+                display: block;
+            }
+        }
+    }
+}
+
+.about-company{
+    padding: 11rem 0;
+    @include sp{
+        padding: 5rem 0 6rem;
+    }
+    &__title{
+        text-align: center;
+    }
+    table{
+        margin-top: 5.5rem;
+        @include sp{
+            margin-top: 4rem;
+        }
+        tr{
+            &:nth-last-child(2){
+                line-height: calc(23/15);
+            }
+            &:last-child{
+                td{
+                    line-height: calc(25/15);
+                    @include sp{
+                        line-height: calc(22/15);
+                    }
+                }
+            }
+        }
+        td{
+            dt{
+                &:first-child{
+                    margin-top: 0;
+                    @include sp{
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-history{
+    padding: 13rem 0;
+    background-color: #f9f9f9;
+    @include sp{
+        padding: 8rem 0;
+    }
+    &__title{
+        margin-bottom: 7rem;
+        text-align: center;
+        @include sp{
+            margin-bottom: 4rem;
+        }
+    }
+    &__inner{
+        &.-list{
+            @include sp{
+                padding-right: 0;
+            }
+        }
+    }
+    &__list{
+        dl{
+            margin-bottom: 2rem;
+            padding: 2rem 3rem;
+            background-color: #fff;
+            box-shadow: 0 4px 20px rgba(0,0,0,.1);
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            @include sp{
+                padding: 3rem 2rem;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        dt{
+            width: 100px;
+            color: $water;
+            font-size: 1.6rem;
+            line-height: calc(15/16);
+            font-weight: $medium;
+            @include sp{
+                width: auto;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid #cfcfcf;
+                display: inline-block;
+            }
+        }
+        dd{
+            width: calc(100% - 100px);
+            padding: 1rem 0 1rem 4rem;
+            border-left: 1px solid #cfcfcf;
+            font-size: 1.6rem;
+            line-height: calc(26/16);
+            font-weight: $regular;
+            letter-spacing: .1em;
+            @include sp{
+                width: 100%;
+                padding: 1.5rem 0 0;
+                border: none;
+            }
+        }
+    }
+}
+
+.about-access{
+    padding: 11rem 0 16rem;
+    background-color: #f9f9f9;
+    @include sp{
+        padding: 4rem 0 10rem;
+    }
+    &__inner{
+        @include sp{
+            padding: 0;
+        }
+    }
+    &__title{
+        text-align: center;
+        margin-bottom: 8.5rem;
+        @include sp{
+            margin-bottom: 4rem;
+        }
+    }
+    &-address{
+        margin-bottom: 4rem;
+        background-color: #fff;
+        box-shadow: 0 4px 20px rgba(0,0,0,.1);
+        display: flex;
+        align-items: center;
+        @include sp{
+            background-color: transparent;
+            box-shadow: none;
+            display: block;
+        }
+        &.-reverse{
+            flex-direction: row-reverse;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &__txt{
+            width: 38.3333%;
+            padding-left: 6.6666%;
+            background-color: #fff;
+            @include sp{
+                margin-left: auto;
+                margin-right: 0;
+                width: 92%;
+                padding: 3rem 3rem 2rem;
+                box-shadow: 0 4px 20px rgba(0,0,0,.1);
+            }
+            h3{
+                margin-bottom: 1rem;
+                color: $water;
+                font-size: 2.8rem;
+                line-height: calc(34/28);
+            }
+            p{
+                margin: 0;
+                font-size: 1.3rem;
+                line-height: calc(24/13);
+                @include sp{
+                    letter-spacing: .01em;
+                }
+            }
+            &.-reverse{
+                padding-left: 8.25%;
+                @include sp{
+                    margin-left: 0;
+                    margin-right: auto;
+                    padding: 3rem 3rem 2rem;
+                }
+            }
+        }
+        &__map{
+            width: 61.6666%;
+            height: 375px;
+            @include sp{
+                width: 100%;
+            }
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

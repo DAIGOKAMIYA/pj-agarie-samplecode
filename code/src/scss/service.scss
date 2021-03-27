@@ -1,0 +1,131 @@
+@charset "utf-8";
+// config ------------------------------------------------------------
+@import "partials/config/_variable";
+@import "partials/config/_breakpoint";
+
+body.service{
+    section:first-child{
+        margin-top: 10rem;
+        @include sp{
+            margin-top: 3rem;
+        }
+    }
+    section:last-child{
+        margin-top: 8rem;
+        @include sp{
+            margin-top: 3rem;
+            margin-bottom: 5rem;
+        }
+    }
+}
+
+.service-content{
+    padding: 6rem 0 8rem;
+    @include sp{
+        padding: 3rem 0 5rem;
+    }
+    &__inner{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1280px;
+        // display: flex;
+        // justify-content: space-between;
+        position: relative;
+    }
+    &__img{
+        width: 960px;
+        width: calc(960 / 1280 * 100%);
+        position: absolute;
+        top: -6rem;
+        left: 40px;
+        @include sp{
+            position: static;
+            width: 92%;
+            max-width: initial;
+            height: 85.337vw;
+            margin-right: auto;
+            margin-left: 0;
+        }
+        img{
+            @include sp{
+                width: auto;
+                height: 100%;
+            }
+        }
+        &--reverse{
+            left: auto;
+            right: 40px;
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+    &__desc{
+        margin-left: auto;
+        margin-right: 40px;
+        max-width: 460px;
+        width: calc(460 / 1200 * 100%);
+        padding: 4rem;
+        background-color: #fff;
+        box-shadow: 0 4px 20px rgba(0,0,0,.15);
+        position: relative;
+        // transform: translateX(-50%);
+        // z-index: 100;
+        @include sp{
+            margin-top: -27vw;
+            margin-right: 0;
+            width: 92%;
+            max-width: initial;
+            padding: 3rem;
+        }
+        &--reverse{
+            margin-left: 40px;
+            margin-right: auto;
+            @include sp{
+                margin-left: 0;
+            }
+        }
+        .logo{
+            margin-bottom: 2rem;
+            width: 100%;
+            &--1{
+                max-width: 311px;
+                @include sp{
+                    max-width: 283px;
+                }
+            }
+            &--2{
+                max-width: 276px;
+                @include sp{
+                    max-width: 258px;
+                }
+            }
+            &--3{
+                max-width: 375px;
+                @include sp{
+                    max-width: 292px;
+                }
+            }
+        }
+        h2{
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            line-height: calc(28/18);
+            @include sp{
+                letter-spacing: .02em;
+            }
+        }
+        p{
+            margin: 0 auto 3rem;
+        }
+        .btn{
+            margin: 0 auto;
+            display: block;
+            width: 291px;
+            max-width: 100%;
+            @media (max-width:480px){
+                max-width: initial;
+                width: 100%;
+            }
+        }
+    }
+}

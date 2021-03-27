@@ -1,0 +1,155 @@
+<%- include('./_config/_config'); %>
+<% title = 'タイトル' %>
+<% page = 'contact' %>
+
+
+
+<% if (!html) { %><?php get_header();?><% } else { %><%- include('./_layouts/header'); %><% } %>
+<% if (!html) { %><?php get_template_part( 'components/content', 'header' ); ?><% } else { %><%- include('./components/content-header'); %><% } %>
+<div class="l-layout__contentsTop">
+    <div class="p-sub-mv">
+        <h1>
+            <span class="en">CONTACT</span>
+            <span class="ja">お問い合わせ</span>
+        </h1>
+    </div>
+</div>
+
+<div class="l-layout__contents">
+    <main class="l-layout__main">
+        <section>
+            <div class="contact-content">
+                <div class="contact-content__inner c-inner--l">
+                    <div class="p-form">
+                        <div class="p-form__inner c-inner">
+                            <div class="p-form__txt">
+                                <p>
+                                    絆コーポレーションへのお問い合わせは下記フォームをご利用ください。<br>
+                                    必ず「<a href="<%- url %>/privacy">プライバシーポリシー</a>」をご一読ください。
+                                </p>
+                            </div>
+                            <% if (!html) { %>
+                                <?php if ( have_posts() ) : ?>
+                                    <?php while ( have_posts() ) : the_post(); ?>    
+                                        <?php the_content(); ?>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                            <% } else { %>
+                            <form action="">
+                                <table>
+                                    <tbody>
+                                        <tr class="required">
+                                            <th>
+                                                <label for="">お名前</label>
+                                            </th>
+                                            <td>
+                                                <div class="input">
+                                                    <input type="text" placeholder="山田 太郎">
+                                                    <!-- <p class="error">未入力です</p> -->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="required">
+                                            <th>
+                                                <label for="">会社名</label>
+                                            </th>
+                                            <td>
+                                                <div class="input">
+                                                    <input type="text" placeholder="〇〇株式会社">
+                                                    <!-- <p class="error">未入力です</p> -->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="required">
+                                            <th>
+                                                <label for="">ご担当者名</label>
+                                            </th>
+                                            <td>
+                                                <input type="text" placeholder="090-1234-5678">
+                                            </td>
+                                        </tr>
+                                        <tr class="required">
+                                            <th>
+                                                <label for="">電話番号</label>
+                                            </th>
+                                            <td>
+                                                <input type="text" placeholder="090-1234-5678">
+                                            </td>
+                                        </tr>
+                                        <tr class="required">
+                                            <th>
+                                                <label for="">メールアドレス</label>
+                                            </th>
+                                            <td>
+                                                <input type="email" placeholder="example@example.com">
+                                            </td>
+                                        </tr>
+                                        <tr class="required">
+                                            <th>
+                                                <label for="">ご住所</label>
+                                            </th>
+                                            <td class="address">
+                                                <div class="line">
+                                                    <div class="line__item -zip">
+                                                        <label>郵便番号</label>
+                                                        <span class="input input--s">
+                                                            <input type="text" placeholder="000000">
+                                                            <!-- <p class="error">未入力です</p> -->
+                                                        </span>
+                                                    </div>
+                                                    <div class="line__item -pref">
+                                                        <label>都道府県</label>
+                                                        <span class="input input--s">
+                                                            <input type="text" placeholder="新潟県">
+                                                        </span>
+                                                    </div>
+                                                    <div class="line__item -city">
+                                                        <label>市区町村</label>
+                                                        <span class="input input--m">
+                                                            <input type="text" placeholder="新潟市">
+                                                            <!-- <p class="error">未入力です</p> -->
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="line">
+                                                    <div class="line__item -street">
+                                                        <label>以降の住所</label>
+                                                        <span class="input input--l">
+                                                            <input type="text" placeholder="中央区神道寺2-1-1">
+                                                            <!-- <p class="error">未入力です</p> -->
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="">
+                                            <th>
+                                                <label for="">お問い合わせ詳細</label>
+                                            </th>
+                                            <td>
+                                                <textarea name="" id="" cols="30" rows="10" placeholder=""></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="submit">
+                                    <div class="btn c-btn1 btn-11">
+                                        <button>送信する<i class="fas fa-chevron-right"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div><%# /.l-layout__contents %>
+
+<div class="l-layout__contentBottom">
+    <% if (!html) { %><?php get_template_part( 'components/content', 'bottom' ); ?><% } else { %><%- include('./components/content-bottom'); %><% } %>
+</div>
+<% if (!html) { %><?php get_template_part( 'components/content', 'footer' ); ?><% } else { %><%- include('./components/content-footer'); %><% } %>
+<% if (!html) { %><?php get_template_part( 'components/content', 'drawer' ); ?><% } else { %><%- include('./components/content-drawer'); %><% } %>
+<% if (!html) { %><?php get_footer();?><% } else { %><%- include('./_layouts/footer'); %><% } %>

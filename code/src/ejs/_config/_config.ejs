@@ -1,0 +1,23 @@
+<%# 静的コーディング中は'html'に設定 %>
+<%# wpのテンプレートにするときは'wp_template'に設定 %>
+<% compile_ejs_into = 'html' %>
+
+<% if (compile_ejs_into === 'html') { %>
+    <% html = true %>
+<% } else if (compile_ejs_into === 'wp_template') { %>
+    <% html = false %>
+<% } %>
+
+<%# ディレクトリ %>
+<% if (!html) { %>
+    <% dir = '<?php echo get_template_directory_uri();?>'; %>
+<% } else { %>
+    <% dir = '.'; %>
+<% } %>
+
+<%# URL %>
+<% if (!html) { %>
+    <% url = '<?php echo home_url();?>'; %>
+<% } else { %>
+    <% url = ''; %>
+<% } %>

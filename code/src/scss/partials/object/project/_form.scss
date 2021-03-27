@@ -1,0 +1,289 @@
+.p-form{
+    padding: 6rem 0 4rem;
+   background-color: #fff;
+   box-shadow: 0 4px 24px rgba(0,0,0,.15);
+   @include sp{
+       padding: 3rem 0;
+   }
+   &__inner{
+       @include sp{
+           padding: 0 20px;
+       }
+   }
+   &__txt{
+       margin-bottom: 5.6rem;
+       text-align: center;
+       @include sp{
+           margin-bottom: 2.6rem;
+       }
+       p{
+           margin-top: 0;
+           color: $water;
+           font-size: 1.6rem;
+           font-weight: bold;
+           line-height: calc(30/16);
+           a{
+               color: $water;
+               font-size: 1.6rem;
+               font-weight: bold;
+               text-decoration: underline;
+           }
+       }
+   }
+   .submit{
+       margin-top: 4rem;
+       text-align: center;
+       @include sp{
+           margin-top: 3rem;
+       }
+       .btn{
+           max-width: 245px;
+           button{
+            letter-spacing: .1em;
+           }
+       }
+   }
+   table{
+       width: 100%;
+   }
+   tr{
+        border-collapse: collapse;
+        border-top: 1px solid #cfcfcf;
+        border-bottom: 1px solid #cfcfcf;
+        line-height: calc(22/15);
+        th,td{
+            padding: 3rem 10px;
+            font-weight: normal;
+            letter-spacing: .1em;
+            @include sp{
+                display: block;
+                letter-spacing: .05em;
+            }
+        }
+        th{
+            width: 25%;
+            padding-top: 3rem + 1.4rem;
+            padding-left: 10px;
+            position: relative;
+            color: $water;
+            font-size: 1.6rem;
+            line-height: calc(22/15);
+            font-weight: $medium;
+            @include sp{
+                margin-bottom: 1.5rem;
+                width: 100%;
+                padding: 2rem 0 0;
+            }
+        }
+        &.required th{
+            &::after{
+                content: '必須';
+                padding: 4px 10px 5px 9px;
+                background-color: #E9474D;
+                border-radius: 4px;
+                position: absolute;
+                top: 3rem + 1.4rem;
+                right: 20px;
+                color: #fff;
+                font-size: 1.4rem;
+                line-height: 1;
+                font-weight: $medium;
+                @include sp{
+                    top: 2rem;
+                    right: 0;
+                }
+            }
+        }
+        td{
+            width: 75%;
+            @include sp{
+                padding: 0 0 2rem;
+                width: 100%;
+            }
+            &.address{
+                @include sp{
+                    padding-bottom: .6rem;
+                }
+            }
+            .error{
+                margin: 5px;
+                // position: absolute;
+                color: #E9474D;
+                font-size: 1.2rem;
+                white-space: nowrap;
+            }
+            .line{
+                margin-bottom: 1.5rem;
+                display: flex;
+                align-items: flex-start;
+                // justify-content: flex-start;
+                justify-content: space-between;
+                @include sp{
+                    margin-bottom: 0;
+                    flex-wrap: wrap;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &__item{
+                    label{
+                        padding-top: 1.4rem;
+                        display: inline-block;
+                        vertical-align: top;
+                        @include sp{
+                            padding: 0;
+                            display: block;
+                        }
+                    }
+                    .input{
+                        @include sp{
+                            margin: .5rem 0 1rem;
+                            width: 100%;
+                            max-width: initial;
+                            display: block;
+                        }
+                        input{
+                            margin-left: 5px;
+                            width: 100%;
+                            max-width: initial;
+                            @include sp{
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                    &.-zip{
+                        @include sp{
+                            width: 31%;
+                        }
+                    }
+                    &.-pref{
+                        @include sp{
+                            width: 64%;
+                        }
+                    }
+                    &.-city{
+                        @include sp{
+                            width: 100%;
+                        }
+                    }
+                    &.-street{
+                        width: 100%;
+                        @include sp{
+                            width: 100%;
+                        }
+                    }
+                }
+                span{
+                    white-space: nowrap;
+                }
+                .error{
+                    position: relative;
+                }
+            }
+            .line2{
+                margin-top: 1.5rem;
+                display: flex;
+                align-items: flex-start;
+                // justify-content: flex-start;
+                justify-content: space-between;
+                .input{
+                    margin-left: 1rem;
+                    padding-top: 0;
+                }
+                span{
+                    white-space: nowrap;
+                    padding-top: 1.4rem;
+                }
+            }
+        }
+        div.input{
+            width: 100%;
+        }
+        span.input{
+            display: inline-block;
+            &--s{
+                max-width: 98px;
+            }
+            &--m{
+                max-width: 238px;
+            }
+            &--l{
+                width: 100%;
+                max-width: 612px;
+            }
+            & + span{
+                margin-left: 1rem;
+                white-space: nowrap;
+            }
+        }
+        input[type=text],
+        input[type=email],
+        input[type=tel]
+        {
+            width: 100%;
+            height: 5rem;
+            padding: 1.4rem 1.5rem;
+            background-color: #EDF5F5;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            line-height: calc(22/15);
+            letter-spacing: .1em;
+            &::placeholder{
+                color: rgba(0,0,0,.5);
+            }
+        }
+        .select{
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            & + span{
+                padding-top: 1.4rem;
+                display: inline-block;
+                vertical-align: top;
+            }
+            &::after{
+                content: '';
+                width: 6px;
+                height: 11px;
+                background: no-repeat url(../img/arrow_selectbox.png) center center / contain;
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 2rem;
+            }
+            select{
+                height: 5rem;
+                padding: 1.4rem 3.6rem 1.4rem 2rem;
+                border: 1px solid #e5e5e5;
+                border-radius: 8px;
+                font-size: 1.5rem;
+                line-height: calc(22/15);
+            }
+        }
+        .radio{
+            padding: 1.4rem 0;
+            @include sp{
+                padding: .5rem 0 .5rem;
+            }
+            label{
+                margin-right: 2rem;
+            }
+        }
+        textarea{
+            width: 100%;
+            height: 30rem;
+            padding: 1.4rem 2rem;
+            background-color: #EDF5F5;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            line-height: calc(22/15);
+            letter-spacing: .1em;
+            @include sp{
+                height: 16rem;
+            }
+            &::placeholder{
+                color: rgba(0,0,0,.5);
+            }
+        }
+    }
+}

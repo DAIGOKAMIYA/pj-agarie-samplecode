@@ -1,0 +1,34 @@
+.p-bottom{
+    // margin-top: 8rem;
+    padding: 4rem 0;
+    background-color: $water2;
+    @include sp{
+        padding: 2.5rem 0 3rem;
+    }
+    &__inner{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1280px;
+        padding: 0 40px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        @include sp{
+            padding: 0 8%;
+        }
+        .card{
+            width: 32%;
+            margin-left: 2%;
+            @include sp{
+                width: 100%;
+                margin: 1.5rem auto 0;
+            }
+            &:nth-child(3n-2){
+                margin-left: 0;
+                @include sp{
+                    margin: 0auto;
+                }
+            }
+        }
+    }
+}

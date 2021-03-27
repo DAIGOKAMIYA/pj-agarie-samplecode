@@ -1,0 +1,238 @@
+.p-header{
+    width: 100%;
+    padding: 0 0 0 50px;
+    background-color: #fff;
+    @include sp{
+        padding: 0;
+    }
+    &__inner{
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__logo{
+        width: 281px;
+        padding: 2.5rem 0;
+        @include sp{
+            width: 39px;
+            padding: 2.5rem 0 2.5rem 0;
+            margin-left: 8%;
+        }
+        .not_home{
+            display: block;
+            &.pctb{
+                display: block;
+                @include sp{
+                    display: none;
+                }
+            }
+            &.sp{
+                display: none;
+                @include sp{
+                    display: block;
+                }
+            }
+        }
+        .only_home{
+            display: none;
+            &.pctb{
+                display: none;
+            }
+            &.sp{
+                display: none;
+            }
+        }
+    }
+    &__menu{
+        width: calc(100% - 281px - 258px - 110px);
+        text-align: center;
+        @include bp4{
+            display: none;
+        }
+        ul{
+            padding-top: 1rem;
+            display: inline-block;
+            li{
+                display: inline;
+                @include sp{
+                    display: block;
+                }
+                &::before{
+                    content: '/';
+                    margin: 0 1.5rem 0 1rem;
+                    color: #000;
+                    @include sp{
+                        content: none;
+                    }
+                }
+                &:first-child::before{
+                    content: none;
+                }
+                a{
+                    color: #000;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    font-family: $yugo;
+                    @include sp{
+                        font-size: 2rem;
+                        line-height: 2;
+                    }
+                }
+            }
+        }
+    }
+    &__tel{
+        width: 258px;
+        padding: 2.8rem 3rem;
+        border-left: 1px solid #cfcfcf;
+        @include bp4{
+            margin-top: 5.6rem;
+            display: none;
+        }
+        dl{
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            line-height: 1;
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+        dt,dd{
+            color: $water;
+        }
+        dt{
+            margin-right: 1rem;
+            width: 5rem;
+            height: 2.2rem;
+            border: 1px solid $water;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            text-align: center;
+            @include sp{
+                width: 8rem;
+                height: 3.5rem;
+                font-size: 1.8rem;
+                line-height: 3.3rem;
+            }
+        }
+        dd{
+            font-size: 1.8rem;
+            font-family: $lato;
+            @include sp{
+                font-size: 2.2rem;
+            }
+            a{
+                color: $water;
+            }
+        }
+    }
+    &__btn{
+        @include bp4{
+            display: none;
+        }
+        .btn{
+            width: 110px;
+            height: 110px;
+            background-color: $water;
+            text-align: center;
+            a{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                // color: #fff;
+                font-size: 1.4rem;
+                line-height: 5rem;
+            }
+        }
+    }
+    &__burger{
+        width: 8rem;
+        height: 110px;
+        padding: 3rem;
+        display: none;
+        cursor: pointer;
+        @include bp4{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        @include sp{
+            width: calc(20px + 16%);
+            padding: 3rem 8%;
+        }
+        div{
+            margin: 4px auto;
+            width: 20px;
+            height: 2px;
+            background-color: #000;
+        }
+    }
+}
+
+body.home{
+    .p-header{
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        z-index: 1000;
+        &__logo{
+            .not_home{
+                display: none;
+                &.pctb{
+                    display: none;
+                    @include sp{
+                        display: none;
+                    }
+                }
+                &.sp{
+                    display: none;
+                    @include sp{
+                        display: none;
+                    }
+                }
+            }
+            .only_home{
+                display: block;
+                &.pctb{
+                    display: block;
+                    @include sp{
+                        display: none;
+                    }
+                }
+                &.sp{
+                    display: none;
+                    @include sp{
+                        display: block;
+                    }
+                }
+            }
+        }
+        &__menu{
+            ul{
+                li{
+                    &::before{
+                        color: #fff;
+                    }
+                    a{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        &__tel{
+            background-color: #fff;
+            border-left: none;
+        }
+        &__burger{
+            div{
+                background-color: #fff;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.p-sub-mv{
+    width: 100%;
+    height: 360px;
+    background: no-repeat url(../img/sub_mv.png) center center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    @include sp{
+        height: 280px;
+    }
+    h1{
+        color: #fff;
+        text-align: center;
+        span{
+            display: block;
+            &.en{
+                font-size: 6.6rem;
+                font-family: $raleway;
+                line-height: calc(56/66);
+                font-weight: bold;
+                letter-spacing: .1em;
+                @include sp{
+                    font-size: 5.6rem;
+                    line-height: calc(56/56);
+                }
+            }
+            &.ja{
+                margin-top: 2rem;
+                font-size: 1.8rem;
+                line-height: calc(26/18);
+                letter-spacing: .1em;
+                @include sp{
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}

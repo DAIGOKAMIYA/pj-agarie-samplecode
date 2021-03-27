@@ -1,0 +1,57 @@
+<%- include('./_config/_config'); %>
+<% title = 'タイトル' %>
+<% page = 'contact' %>
+
+
+
+<% if (!html) { %><?php get_header();?><% } else { %><%- include('./_layouts/header'); %><% } %>
+<% if (!html) { %><?php get_template_part( 'components/content', 'header' ); ?><% } else { %><%- include('./components/content-header'); %><% } %>
+<div class="l-layout__contentsTop">
+    <div class="p-sub-mv">
+        <h1>
+            <span class="en">ENTRY</span>
+            <span class="ja">採用応募フォーム</span>
+        </h1>
+    </div>
+</div>
+
+<div class="l-layout__contents">
+    <main class="l-layout__main">
+        <section>
+            <div class="career_form-content career_form-content--thanks">
+                <div class="career_form-content__inner c-inner--l">
+                    <div class="p-form">
+                        <div class="p-form__inner c-inner">
+                            <% if (!html) { %>
+                                <?php if ( have_posts() ) : ?>
+                                    <?php while ( have_posts() ) : the_post(); ?>    
+                                        <?php the_content(); ?>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                            <% } else { %>
+                            <h2>お問い合わせ<br class="sp">ありがとうございます</h2>
+                            <p>この度は絆コーポレーションへお問い合わせいただき誠にありがとうございます。<br>
+                                3営業日以内に担当者より折り返しご連絡させていただきます。<br>
+                                お急ぎの場合はお電話いただくようお願いします。</p>
+                            <p>また、当社では事業部毎にWebサイトを運営しております。こちらも併せてご覧ください。<br>
+                                今後ともどうぞよろしくお願いいたします。</p>
+                            <% } %>
+                            <div class="p-form__btn">
+                                <div class="btn c-btn1 btn-11">
+                                    <a href="<%- url %>">トップへ戻る<i class="fas fa-chevron-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div><%# /.l-layout__contents %>
+
+<div class="l-layout__contentBottom">
+    <% if (!html) { %><?php get_template_part( 'components/content', 'bottom' ); ?><% } else { %><%- include('./components/content-bottom'); %><% } %>
+</div>
+<% if (!html) { %><?php get_template_part( 'components/content', 'footer' ); ?><% } else { %><%- include('./components/content-footer'); %><% } %>
+<% if (!html) { %><?php get_template_part( 'components/content', 'drawer' ); ?><% } else { %><%- include('./components/content-drawer'); %><% } %>
+<% if (!html) { %><?php get_footer();?><% } else { %><%- include('./_layouts/footer'); %><% } %>

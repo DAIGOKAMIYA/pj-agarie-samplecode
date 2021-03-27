@@ -1,0 +1,24 @@
+.c-col{
+    display: flex;
+    flex-wrap: wrap;
+    &--jcsa{
+        @extend .c-col;
+        justify-content: space-around;
+    }
+    &--jcsb{
+        @extend .c-col;
+        justify-content: space-between;
+    }
+    &--jcc{
+        @extend .c-col;
+        justify-content: center;
+    }
+    &--jcfs{
+        @extend .c-col;
+        justify-content: flex-start;
+    }
+    &--jcfe{
+        @extend .c-col;
+        justify-content: flex-end;
+    }
+}

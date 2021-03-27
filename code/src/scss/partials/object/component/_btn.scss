@@ -1,0 +1,112 @@
+.c-btn1{
+    width: 100%;
+    max-width: 200px;
+    height: 6rem;
+    background-color: $water;
+    border-radius: 3rem;
+    box-shadow: 0 4px 24px rgba(0,109,123,.4);
+    display: inline-block;
+    text-align: center;
+    a,button{
+        width: 100%;
+        display: block;
+        color: #fff;
+        font-size: 1.6rem;
+        line-height: 6rem;
+        i{
+            margin-left: 2rem;
+        }
+    }
+}
+
+
+@keyframes criss-cross-left {
+    0% {
+      left: -20px;
+    }
+    50% {
+      left: 50%;
+      width: 20px;
+      height: 20px;
+    }
+    100% {
+      left: 50%;
+      width: 150%;
+      height: 150%;
+    }
+  }
+  
+  @keyframes criss-cross-right {
+    0% {
+      right: -20px;
+    }
+    50% {
+      right: 50%;
+      width: 20px;
+      height: 20px;
+    }
+    100% {
+      right: 50%;
+      width: 150%;
+      height: 150%;
+    }
+  }
+.btn-11{
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    &:before,
+    &:after {
+      position: absolute;
+      top: 50%;
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+      z-index: 0;
+    }
+    a{
+        color: #fff;
+    }
+    &:before {
+        left: -20px;
+        transform: translate(-50%, -50%);
+        // animation: criss-cross-left 0.8s reverse;
+      }
+      
+      &:after {
+        right: -20px;
+        transform: translate(50%, -50%);
+        // animation: criss-cross-right 0.8s reverse;
+      }
+
+      &:hover {
+          border: 1px solid $water;
+          // color: tint($btn-color, 75%);
+          a,button{
+            color: rgba(0,174,196,.75);
+            opacity: 1;
+            position: relative;
+            z-index: 100;
+            span{
+                position: relative;
+                z-index: 100;
+            }
+    }
+        &:before,
+        &:after {
+          // @include size($btn-width);
+        }
+        
+        &:before {
+          animation: criss-cross-left 0.8s both;
+          animation-direction: alternate;
+        }
+        
+        &:after {
+          animation: criss-cross-right 0.8s both;
+          animation-direction: alternate;
+        }
+      }
+}

@@ -1,0 +1,143 @@
+html{
+    font-size: 62.5%;
+    // font-size: 56.25%;
+    // @include bp1{
+    //     font-size: 56.25%;
+    // }
+    // @include bp2{
+    //     font-size: 50%;
+    // }
+    // @include bp3{
+    //     font-size: 43.75%;
+    // }
+    // @include sp{
+    //     font-size: 37.5%;
+    // }
+    // @include spp{
+    //     font-size: 25%;
+    // }
+}
+
+body{
+    // 古いスマホの横向き表示対策
+    // -webkit-text-size-adjust: 100%; // destyleで指定済みのためコメントアウト
+    
+    // 要確認------------------------------------------------------------------------------------------------------------------------------------------------------
+    color: $color_base;
+    font-size: 1.5rem;
+    letter-spacing: .1em;
+    line-height: calc(28 / 15);
+    font-family: $noto_sans;
+    font-weight: $regular;
+    // font-feature-settings: "palt 1";
+    // @include sp{
+    //     font-size: 1rem;
+    // }
+    &.have_curtain{
+        // position: fixed;
+        // width: 100%;
+        overflow: hidden;
+    }
+}
+_:-ms-lang(x)::-ms-backdrop, body{
+    // font-family: $ie;
+}
+
+h1,h2,h3,h4,h5,h6{
+    letter-spacing: .1em;
+}
+
+p{
+    // 要確認------------------------------------------------------------------------------------------------------------------------------------------------------
+    margin: 3rem 0;
+    @include sp{
+        margin: 2rem 0;
+    }
+}
+
+a{
+    color: $color_base;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    transition-property: color,opacity;
+
+    &:hover{
+        transition: .5s;
+        transition-property: color,opacity;
+        opacity: .6;
+    }
+}
+
+img{
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+
+    // transformのアニメーションでちらつき防止(-webkit-font-smoothingを使っているとフォントレンタリングに影響与えるので注意)
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    // 上記だけで解決されないときに指定
+    // overflow: hidden;
+}
+
+table{
+    letter-spacing: .04em;
+}
+
+// floatを指定している要素の親要素に使用
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+    // iphoneのsafariでボタンがカスタマイズできるようにする
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+// デバイスごとに表示を切り替えたい時に使用
+.pc{
+    @include tb{
+        display: none;
+    }
+}
+.pctb{
+    @include sp{
+        display: none;
+    }
+}
+.tb{
+    display: none;
+    @include tb{
+        display: block;
+    }
+    @include sp{
+        display: none;
+    }
+}
+.tbsp{
+    display: none;
+    @include tb{
+        display: block;
+    }
+}
+.sp{
+    display: none;
+    @include sp{
+        display: block;
+    }
+}
+.spp{
+    display: none;
+    @include spp{
+        display: block;
+    }
+}
